@@ -82,7 +82,7 @@ CREATE TABLE user_collections (
     FOREIGN KEY (card_id) REFERENCES cards(card_id)
 );
 
--- 5. 시세 정보 테이블 (선택 사항)
+-- 5. 시세 정보 테이블
 CREATE TABLE card_prices (
     price_id BIGINT AUTO_INCREMENT PRIMARY KEY,
     card_id BIGINT NOT NULL,
