@@ -4,10 +4,6 @@
  주요 기능: 카드 상세 정보, 기술/특성 저장, 외부 API 연동(ID), 유저 도감 관리
 */
 
--- 데이터베이스 생성 및 선택 (필요 시 주석 해제 후 사용)
--- CREATE DATABASE IF NOT EXISTS pokemon_card_db;
--- USE pokemon_card_db;
-
 -- 1. 카드 세트 테이블 (예: SV4a 샤이니트레저, S12a VSTAR 유니버스 등)
 CREATE TABLE card_sets (
     set_id INT AUTO_INCREMENT PRIMARY KEY,
