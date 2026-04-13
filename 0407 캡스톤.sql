@@ -32,7 +32,7 @@ CREATE TABLE cards (
     -- 기본 정보
     card_name_ko VARCHAR(100) NOT NULL,       -- 카드 이름 (한글)
     card_name_en VARCHAR(100),                -- 카드 이름 (영문)
-    rarity_code VARCHAR(10) NULL,             -- 레어도 (NULL 허용: SAR, SR, AR 등)
+    rarity_code VARCHAR(10) NULL,             -- 레어도 (SAR, SR, AR 등)
     rarity_score INT DEFAULT 0,               -- 랭킹 산정용 점수
     attribute VARCHAR(20),                    -- 속성 (풀, 불꽃, 물, 초, 투구 등)
     card_type VARCHAR(20),                    -- 유형 (기본, 1진화, 2진화, 서포트, 아이템)
