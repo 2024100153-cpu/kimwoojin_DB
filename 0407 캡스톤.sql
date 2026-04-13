@@ -29,8 +29,8 @@ CREATE TABLE cards (
     card_name_ko VARCHAR(100) NOT NULL,       -- 카드 이름 (한글)
     card_name_en VARCHAR(100),                -- 카드 이름 (영문)
     rarity_code VARCHAR(10) NULL,             -- 레어도 (SAR, SR, AR 등)
-    rarity_score INT DEFAULT 0,               -- 랭킹 산정용 점수 ---------------------- 랭킹 뺄 것임,
-    attribute VARCHAR(20),                    -- 속성 (풀, 불꽃, 물 등)
+    rarity_score INT DEFAULT 0,               -- 랭킹 산정용 점수 ---------------------- 랭킹 뺄 것임, 혹시 모르니 일단 남겨뒀음
+    attribute VARCHAR(20),                    -- 무슨 타입인지 (풀, 불꽃, 물 등)
     card_type VARCHAR(20),                    -- 유형 (기본, 1진화, 2진화, 서포트, 아이템)
     hp INT,                                   -- 포켓몬 체력
     
