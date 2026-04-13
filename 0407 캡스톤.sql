@@ -12,7 +12,7 @@ CREATE TABLE card_sets (
     set_name_ko VARCHAR(100) NOT NULL,        -- 한국어 세트명
     set_name_en VARCHAR(100),                 -- 영어 세트명 (API 연동용)
     total_cards INT,                          -- 세트 내 총 카드 수
-    release_date DATE,                        -- 출시일
+    release_date DATE,                        -- 출시일 # 넣을 지 말지 고민
     logo_url TEXT                             -- 세트 심볼 이미지 (S3 경로)
 );
 
