@@ -128,4 +128,17 @@ CREATE TABLE IF NOT EXISTS trade_history (
     FOREIGN KEY (buyer_id) REFERENCES users(user_id) ON DELETE SET NULL,
     FOREIGN KEY (seller_id) REFERENCES users(user_id) ON DELETE SET NULL,
     FOREIGN KEY (card_id) REFERENCES cards(card_id)
+
 ) ENGINE=InnoDB;
+
+
+-- 이벤트 스케줄러 활성화: 예약된 자동 작업 기능을 켬
+SET GLOBAL event_scheduler = ON;
+
+-- 정기 데이터 정리: 거래 내역이 너무 쌓이면 검색이 느려지므로 6개월 지난 영수증은 자동 삭제
+CREATE EVENT IF NOT EXISTS archive_old_trades
+ON SCHEDULE EVERY 1 WEEK -- 매주 1번씩 실행
+COMMENT '매주 월요일, 6개월 이상 된 거래 내역 정리로 DB 최적화'
+DO
+  DELETE FROM trade_history 
+  WHERE trade_date < DATE_SUB(NOW(), INTERVAL 6 MONTH);
