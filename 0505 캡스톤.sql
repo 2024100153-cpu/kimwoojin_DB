@@ -1,5 +1,4 @@
--- 김우진이 보내줄 SQL
-
+-- 2026.05.05 작성
 CREATE TABLE `card_sets` (
   `set_id` int NOT NULL AUTO_INCREMENT, -- 세트 고유 번호, 자동 증가
   `set_code` varchar(10) NOT NULL, -- 외부 API용 세트 식별 코드 (예: SV1, SV4a)
